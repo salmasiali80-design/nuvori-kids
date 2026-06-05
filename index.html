@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NUVORI KIDS · Explorer Profile</title>
+<link rel="icon" type="image/png" href="nuvori-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&family=Fredoka:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --obsidian:#0B0807; --obsidian-2:#141010;
+  --gold:#B89A5E; --gold-bright:#E3C176; --gold-bright-soft:#E3C176;
+  --champagne:#D7C08A; --plat:#F4EBDD;
+  --kid-bg:#FBF6EC; --kid-card:#FFFFFF;
+  --kid-blue:#3B82C4; --kid-blue-soft:#E8F1FA;
+  --kid-green:#5BA86B; --kid-green-soft:#EAF5EC;
+  --kid-coral:#E08A5B; --kid-coral-soft:#FBEEE4;
+  --ink:#2A2420; --ink-soft:#6B6358;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--obsidian);color:var(--plat);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.6}
+
+.shell{max-width:680px;margin:0 auto;background:var(--obsidian);min-height:100vh;
+  border-left:1px solid rgba(184,154,94,.18);border-right:1px solid rgba(184,154,94,.18)}
+
+header.brand{padding:34px 28px 26px;text-align:center;border-bottom:1px solid rgba(184,154,94,.2);
+  background:linear-gradient(180deg,#141010 0%,var(--obsidian) 100%)}
+header.brand img{height:118px;width:auto;display:block;margin:0 auto 4px;
+  filter:brightness(1.8) contrast(1.12) saturate(1.18) drop-shadow(0 0 14px rgba(227,193,118,.4))}
+.brand-word{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(15px,2vw,18px);
+  letter-spacing:.28em;color:var(--gold-bright-soft);line-height:1;margin-top:2px}
+.brand-sub{font-family:'Cinzel',serif;font-weight:500;font-size:10px;letter-spacing:.34em;
+  color:var(--gold);opacity:.78;margin-top:9px}
+.brand-division{margin-top:22px;display:flex;flex-direction:column;align-items:center;gap:9px}
+.brand-division .div-rule{width:46px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.brand-division .div-line{font-family:'Cinzel',serif;font-size:13px;letter-spacing:.5em;color:var(--champagne);
+  padding-left:.5em}
+.brand-division .div-tag{font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.32em;color:var(--gold);
+  opacity:.7;text-transform:uppercase}
+
+.masthead{padding:30px 28px 24px;text-align:center;border-bottom:1px solid rgba(184,154,94,.14)}
+.masthead .eyebrow{font-family:'Inter',sans-serif;font-weight:600;font-size:11px;letter-spacing:.22em;
+  color:var(--gold);margin-bottom:12px}
+.masthead h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-style:italic;
+  font-size:clamp(34px,8vw,46px);color:var(--plat);line-height:1.04}
+.masthead .trail{margin-top:14px;font-size:13px;color:var(--champagne);letter-spacing:.04em}
+
+.credential{padding:16px 28px;text-align:center;border-bottom:1px solid rgba(184,154,94,.14);
+  background:var(--obsidian)}
+.credential .by{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--plat)}
+.credential .cred{margin-top:5px;font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.1em;
+  color:#9E927C}
+
+.meta{display:flex;justify-content:center;gap:0;border-bottom:1px solid rgba(184,154,94,.14);background:var(--obsidian-2)}
+.meta div{flex:1;text-align:center;padding:13px 8px;border-right:1px solid rgba(184,154,94,.1)}
+.meta div:last-child{border-right:none}
+.meta .ml{font-family:'Inter',sans-serif;font-size:9.5px;letter-spacing:.14em;color:var(--gold);text-transform:uppercase;margin-bottom:4px}
+.meta .mv{font-family:'Inter',sans-serif;font-size:12.5px;color:var(--champagne);font-weight:500}
+
+.kid-zone{background:var(--kid-bg);padding:8px 0 4px}
+.greet{padding:30px 26px 8px;text-align:center}
+.greet .hi{font-family:'Fredoka',sans-serif;font-weight:600;font-size:26px;color:var(--ink)}
+.greet .wave{font-size:30px;display:inline-block;animation:wave 2.4s ease-in-out infinite;transform-origin:70% 70%}
+@keyframes wave{0%,60%,100%{transform:rotate(0)}10%{transform:rotate(16deg)}20%{transform:rotate(-8deg)}30%{transform:rotate(16deg)}40%{transform:rotate(-4deg)}50%{transform:rotate(10deg)}}
+.greet p{margin-top:12px;font-size:15.5px;color:var(--ink-soft);max-width:480px;margin-left:auto;margin-right:auto}
+.greet .go{margin-top:16px;font-family:'Fredoka',sans-serif;font-weight:600;font-size:17px;color:var(--kid-coral)}
+
+.card{background:var(--kid-card);margin:18px 22px;border-radius:20px;padding:24px 22px 22px;
+  box-shadow:0 4px 22px rgba(42,36,32,.07);border:1px solid rgba(42,36,32,.05);position:relative;overflow:hidden}
+.card::before{content:'';position:absolute;top:0;left:0;width:100%;height:5px}
+.card.blue::before{background:var(--kid-blue)} .card.green::before{background:var(--kid-green)} .card.coral::before{background:var(--kid-coral)}
+.task-tag{display:inline-flex;align-items:center;gap:8px;font-family:'Fredoka',sans-serif;font-weight:600;
+  font-size:12.5px;letter-spacing:.04em;padding:5px 13px;border-radius:30px;margin-bottom:13px}
+.card.blue .task-tag{background:var(--kid-blue-soft);color:var(--kid-blue)}
+.card.green .task-tag{background:var(--kid-green-soft);color:var(--kid-green)}
+.card.coral .task-tag{background:var(--kid-coral-soft);color:var(--kid-coral)}
+.card h2{font-family:'Fredoka',sans-serif;font-weight:600;font-size:21px;color:var(--ink);margin-bottom:6px}
+.card .instr{font-size:14.5px;color:var(--ink-soft);margin-bottom:16px}
+.card .instr b{color:var(--ink);font-weight:600}
+
+.model{background:var(--kid-bg);border-radius:14px;padding:15px 17px;margin:14px 0;border-left:3px solid var(--gold)}
+.model .mlabel{font-family:'Inter',sans-serif;font-weight:700;font-size:10.5px;letter-spacing:.14em;color:var(--gold);margin-bottom:9px}
+.model .line{font-family:'Inter',sans-serif;font-size:15.5px;color:var(--ink);line-height:1.85}
+.model .line .fill{background:#FFF3D6;color:#9A7A2E;font-weight:600;padding:1px 7px;border-radius:6px}
+.model .line .emo{font-size:17px}
+
+.slot{font-family:'Inter',sans-serif;font-size:15.5px;color:var(--ink);line-height:2.1;margin-top:6px}
+.slot .blank{display:inline-block;min-width:90px;border-bottom:2px dotted #C9BFAE;height:1.2em;vertical-align:bottom;margin:0 2px}
+.timebox{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 6px}
+.timebox span{background:var(--kid-coral-soft);color:var(--kid-coral);font-weight:600;font-size:13px;padding:6px 12px;border-radius:20px;font-family:'Fredoka',sans-serif}
+.done{margin-top:14px;font-family:'Fredoka',sans-serif;font-weight:600;font-size:14px;color:var(--kid-green);text-align:center}
+.funfact{margin-top:14px;font-size:13.5px;color:var(--ink-soft);background:#FFFBF0;border-radius:12px;padding:11px 14px;text-align:center}
+
+.voice{background:linear-gradient(180deg,var(--kid-bg) 0%,#141010 100%);padding:30px 26px 34px;text-align:center}
+.voice .mic{font-size:38px;margin-bottom:10px}
+.voice h2{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:30px;color:var(--plat);margin-bottom:10px}
+.voice p{font-size:15px;color:var(--champagne);max-width:440px;margin:0 auto 4px}
+.voice .strong{color:var(--gold-bright);font-weight:600}
+
+.way{padding:28px 28px;text-align:center;border-top:1px solid rgba(184,154,94,.14)}
+.way .badge{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.24em;color:var(--gold);margin-bottom:12px}
+.way h3{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:24px;color:var(--plat);margin-bottom:8px}
+.way p{font-size:14px;color:#A89B82;max-width:460px;margin:0 auto}
+.way .tagline{margin-top:16px;font-family:'Cinzel',serif;font-size:13px;letter-spacing:.18em;color:var(--champagne)}
+
+.parent-note{background:var(--obsidian-2);margin:0;padding:24px 28px;border-top:1px solid rgba(184,154,94,.16)}
+.parent-note .pn-label{font-family:'Inter',sans-serif;font-weight:700;font-size:10.5px;letter-spacing:.14em;color:var(--gold);margin-bottom:10px}
+.parent-note p{font-size:13.5px;color:#9E927C;line-height:1.7}
+
+/* ===== FOUNDER — MASTERPIECE AUTHORITY SECTION ===== */
+.founder{position:relative;background:
+    radial-gradient(120% 80% at 50% 0%, rgba(184,154,94,.10) 0%, rgba(11,8,7,0) 55%),
+    linear-gradient(180deg,#0E0B09 0%,#0B0807 100%);
+  padding:54px 30px 48px;text-align:center;border-top:1px solid rgba(184,154,94,.22);overflow:hidden}
+.founder::before,.founder::after{content:'';position:absolute;left:50%;transform:translateX(-50%);
+  width:64%;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.55}
+.founder::before{top:0}.founder::after{bottom:0}
+.founder .kicker{font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:.36em;color:var(--gold);
+  margin-bottom:26px;opacity:.85}
+.portrait-wrap{position:relative;width:128px;height:128px;margin:0 auto 22px}
+.portrait-wrap .ring{position:absolute;inset:-7px;border-radius:50%;
+  background:conic-gradient(from 210deg,#B89A5E,#E3C176,#D7C08A,#B89A5E,#8A7038,#E3C176,#B89A5E);
+  padding:2px;-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 2px),#000 calc(100% - 2px));
+          mask:radial-gradient(farthest-side,transparent calc(100% - 2px),#000 calc(100% - 2px))}
+.portrait-wrap .halo{position:absolute;inset:-22px;border-radius:50%;
+  background:radial-gradient(circle,rgba(227,193,118,.22),transparent 68%);filter:blur(6px)}
+.portrait-wrap img{position:relative;width:128px;height:128px;border-radius:50%;object-fit:cover;
+  border:1px solid rgba(244,235,221,.25);box-shadow:0 8px 30px rgba(0,0,0,.5)}
+.founder .name{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:34px;color:var(--plat);
+  line-height:1.05;letter-spacing:.01em}
+.founder .role{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.24em;color:var(--champagne);
+  margin-top:8px}
+.founder .lede{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:19px;
+  color:#D8CDB8;max-width:430px;margin:20px auto 0;line-height:1.5}
+.creds{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 10px;max-width:480px;margin:26px auto 0}
+.creds span{font-family:'Inter',sans-serif;font-size:11.5px;letter-spacing:.05em;color:#C9BC9F;
+  border:1px solid rgba(184,154,94,.35);border-radius:30px;padding:7px 15px;background:rgba(184,154,94,.05)}
+.creds span b{color:var(--gold-bright);font-weight:600}
+.founder .brandline{margin-top:30px;padding-top:24px;border-top:1px solid rgba(184,154,94,.16)}
+.founder .brandline .bw{font-family:'Cinzel',serif;font-weight:600;font-size:15px;letter-spacing:.28em;color:var(--gold-bright-soft)}
+.founder .brandline .bt{font-family:'Inter',sans-serif;font-size:12px;color:#9E927C;margin-top:8px;letter-spacing:.04em}
+
+footer.brand-foot{padding:28px;text-align:center;border-top:1px solid rgba(184,154,94,.2)}
+footer.brand-foot img{height:64px;width:auto;margin:0 auto 8px;display:block;
+  filter:brightness(1.9) contrast(1.15) saturate(1.2) drop-shadow(0 0 10px rgba(227,193,118,.5))}
+footer.brand-foot .fw{font-family:'Cinzel',serif;font-weight:600;font-size:16px;letter-spacing:.26em;color:var(--gold-bright-soft)}
+footer.brand-foot .fdiv{width:38px;height:1px;margin:11px auto 9px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+footer.brand-foot .fs{font-family:'Cinzel',serif;font-size:11px;color:var(--champagne);opacity:.85;letter-spacing:.42em;padding-left:.42em}
+footer.brand-foot .ft{font-family:'Cinzel',serif;font-size:11px;color:var(--champagne);opacity:.8;letter-spacing:.34em;margin-top:14px;padding-left:.34em}
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <header class="brand">
+    <img src="nuvori-mark.png" alt="NUVORI · Exam Intelligence House">
+    <div class="brand-division">
+      <div class="div-rule"></div>
+      <div class="div-line">KIDS</div>
+      <div class="div-tag">A Journey for Young Learners</div>
+    </div>
+  </header>
+
+  <div class="masthead">
+    <div class="eyebrow">EXPLORERS &middot; LEVEL 1: FIRST WORDS</div>
+    <h1>Explorer&nbsp;Profile</h1>
+    <div class="trail">&#9733; Pre-Class Assignment &mdash; Ahmet &amp; Efe</div>
+  </div>
+
+  <div class="meta">
+    <div><div class="ml">Assignment</div><div class="mv">No. 1</div></div>
+    <div><div class="ml">Stop</div><div class="mv">1 of 6</div></div>
+    <div><div class="ml">Due</div><div class="mv">Before Lesson 1</div></div>
+  </div>
+
+  <div class="kid-zone">
+    <div class="greet">
+      <div class="hi">Hey Ahmet, hey Efe <span class="wave">&#128075;</span></div>
+      <p>Before our first lesson, you&rsquo;re going to build something cool: your own <b>Explorer Profile</b> &mdash; a short page all about <i>you</i>, in English.</p>
+      <p>Every sentence has a model right next to it. You just copy the shape and put in <i>your own</i> answer. Three small tasks. You&rsquo;ve got this.</p>
+      <div class="go">Ready? Let&rsquo;s go &#129518;</div>
+    </div>
+
+    <div class="card blue">
+      <span class="task-tag">&#9733; TASK A</span>
+      <h2>Who I Am</h2>
+      <p class="instr">Copy these three lines into your notebook. Change only the <b>colored</b> part to make it true for you.</p>
+      <div class="model">
+        <div class="mlabel">MODEL</div>
+        <div class="line">Hi, I&rsquo;m <span class="fill">Ali</span>.<br>
+        I&rsquo;m <span class="fill">eleven</span>.<br>
+        I&rsquo;m in <span class="fill">5th grade</span>.</div>
+      </div>
+      <div class="done">&#127919; That&rsquo;s it &mdash; just three lines!</div>
+    </div>
+
+    <div class="card green">
+      <span class="task-tag">&#9733; TASK B</span>
+      <h2>My People</h2>
+      <p class="instr">Now write about your family. Write <b>one line for each person who lives with you</b> &mdash; and add your pet if you have one. Use <b>his</b> for boys, <b>her</b> for girls.</p>
+      <div class="model">
+        <div class="mlabel">MODELS &mdash; COPY THE SHAPE</div>
+        <div class="line">This is my <span class="fill">mom</span>. Her name is <span class="fill">Ay&#351;e</span>.<br>
+        This is my <span class="fill">dad</span>. His name is <span class="fill">Mehmet</span>.<br>
+        I&rsquo;ve got a little brother. His name is <span class="fill">Can</span>.<br>
+        I&rsquo;ve got a dog. His name is <span class="fill">Karaba&#351;</span>. <span class="emo">&#128054;</span></div>
+      </div>
+      <div class="slot">
+        This is my <span class="blank"></span>. <span class="blank"></span> name is <span class="blank"></span>.<br>
+        This is my <span class="blank"></span>. <span class="blank"></span> name is <span class="blank"></span>.<br>
+        I&rsquo;ve got <span class="blank"></span>.
+      </div>
+    </div>
+
+    <div class="card coral">
+      <span class="task-tag">&#9733; TASK C</span>
+      <h2>My Day</h2>
+      <p class="instr">Last task! Write about a normal day. Start each line with a time word.</p>
+      <div class="model">
+        <div class="mlabel">MODEL &mdash; A NORMAL DAY</div>
+        <div class="line">Every morning, I get up and brush my teeth.<br>
+        Then I have breakfast and go to school.<br>
+        After school, I play soccer with my friends.<br>
+        In the evening, I watch TV with my family.<br>
+        Before bed, I read a little.</div>
+      </div>
+      <div class="timebox">
+        <span>Every morning</span><span>Then</span><span>After school</span><span>In the evening</span><span>Before bed</span>
+      </div>
+      <div class="slot">
+        Every morning, I <span class="blank"></span>.<br>
+        Then <span class="blank"></span>.<br>
+        After school, I <span class="blank"></span>.<br>
+        In the evening, I <span class="blank"></span>.<br>
+        Before bed, I <span class="blank"></span>.
+      </div>
+      <div class="funfact">&#127758; Fun fact: Americans say <b>soccer</b>, the British say <b>football</b> &mdash; same game!</div>
+    </div>
+  </div>
+
+  <div class="voice">
+    <div class="mic">&#127908;</div>
+    <h2>Final Mission</h2>
+    <p>Read your whole profile out loud &mdash; Task A, B and C &mdash; and send me <span class="strong">one voice message</span>.</p>
+    <p>It doesn&rsquo;t have to be perfect. I just want to hear your first English. In a few weeks, you&rsquo;ll laugh at how far you came. &#128170;</p>
+  </div>
+
+  <div class="way">
+    <div class="badge">THE NUVORI WAY</div>
+    <h3>We don&rsquo;t guess. We find.</h3>
+    <p>Notice something: every answer came from a <b style="color:#C9B88E">model you could see</b> &mdash; not from guessing. That&rsquo;s the whole idea. We look, we find, we build.</p>
+    <div class="tagline" lang="tr">TAHM&#304;NDEN KANITA</div>
+  </div>
+
+  <div class="parent-note" lang="tr">
+    <div class="pn-label">VEL&#304;LER&#304;M&#304;ZE NOT</div>
+    <p>Bu &ouml;dev &uuml;&ccedil; k&uuml;&ccedil;&uuml;k g&ouml;revden olu&#351;uyor ve her birinin &ouml;rne&#287;i var. &Ccedil;ocuklar &ouml;rne&#287;e bak&#305;p kendi cevab&#305;n&#305; yazacak &mdash; Google Translate&rsquo;e gerek yok. L&uuml;tfen yaz&#305;y&#305; &ccedil;ocuk kendisi yazs&#305;n; siz sadece yan&#305;nda olun ve cesaret verin. Sonunda kendi sesleriyle bir kay&#305;t g&ouml;nderecekler &mdash; ilk dersten &ouml;nceki ilk k&uuml;&ccedil;&uuml;k ba&#351;ar&#305;lar&#305;.</p>
+  </div>
+
+  <section class="founder">
+    <div class="kicker">THE TEACHER BEHIND THE WORK</div>
+    <div class="portrait-wrap">
+      <div class="halo"></div>
+      <div class="ring"></div>
+      <img src="ali-salmasi.jpg" alt="Ali Salmasi">
+    </div>
+    <div class="name">Ali Salmasi</div>
+    <div class="role">FOUNDER &middot; NUVORI</div>
+    <p class="lede">&ldquo;For twenty-five years I have studied how a learner truly learns &mdash; from a child&rsquo;s first word to a professional&rsquo;s hardest exam. NUVORI is where that becomes visible.&rdquo;</p>
+    <div class="creds">
+      <span>Former <b>University Lecturer</b></span>
+      <span><b>Cambridge CELTA</b></span>
+      <span><b>25+ years</b> teaching</span>
+      <span><b>IELTS</b> &middot; <b>TOEFL</b> &middot; <b>SAT</b> &middot; <b>YDS</b> &amp; more</span>
+      <span>Interview &amp; performance coaching</span>
+    </div>
+    <div class="brandline">
+      <div class="bt">Private English Intelligence<br><span style="opacity:.8">From guessing to evidence &mdash; from effort to confidence</span></div>
+    </div>
+  </section>
+
+  <footer class="brand-foot">
+    <img src="nuvori-mark.png" alt="NUVORI">
+    <div class="ft">KIDS &middot; Explorers</div>
+  </footer>
+
+</div>
+</body>
+</html>
